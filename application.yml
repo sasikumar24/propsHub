@@ -19,4 +19,4 @@ spring:
                 - Path=/users/**
 
 
-test.dummy: testValue1222334455
+test.dummy: sasi
