@@ -23,7 +23,7 @@ spring:
                 - Path=/departments/**
 
 
-test.dummy: '{cipher}a1720c5e2615b875096162ee00a6b2bc543fcbacea389cafdcb076668ff0b256'
+test.dummy: '{cipher}507ee8997064fdd3ae7db2814683c7c937afd438c0e46a7e6b4364c1cd75826c550c67a393fbed15990f76a48e453deb'
 
 # for /actuator endpoints
 management:
