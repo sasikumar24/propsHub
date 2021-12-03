@@ -1,1 +1,8 @@
 test.dummy: '{cipher}a1720c5e2615b875096162ee00a6b2bc543fcbacea389cafdcb076668ff0b256'
+
+# for /actuator endpoints
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
