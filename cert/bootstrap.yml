@@ -21,3 +21,10 @@ spring:
               uri: lb://DEPARTMENT-SERVICE
               predicates:
                 - Path=/departments/**
+
+# for /actuator endpoints
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
