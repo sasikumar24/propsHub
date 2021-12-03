@@ -23,4 +23,4 @@ spring:
                 - Path=/departments/**
 
 
-test.dummy: "{cipher}7f248797fbe4c528091e8eed31927880094fb79b06e461f5b494b98660cdf680"
+test.dummy: "{cipher}14659eb5414bdead3359d042f8a93ac30d981e284409a1e943eb4d12fb964379"
