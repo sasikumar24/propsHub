@@ -1,0 +1,37 @@
+
+# dynamic port will assign from service registry. 
+server:
+   port: 0
+
+
+# application:name - name of the service
+# import - get the property file from config server
+spring:
+   profiles:
+      active: cert,cert-db,cert-ml
+   application:
+      name: USER-SERVICE
+   config:
+      import: configserver:http://localhost:9902
+
+encrypt:
+   key: foM}kcGHmxB7[C9
+
+# instanceId - generate the uniq eureka instanceId for service registry
+# leaseRenewalIntervalInSeconds, leaseExpirationDurationInSeconds - evict the unavaibalbe instance from service registry
+eureka:
+   instance:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      leaseRenewalIntervalInSeconds: 1
+      leaseExpirationDurationInSeconds: 2
+
+
+# for /actuator endpoints
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+   endpoint:
+      health:
+         show-details: always
